@@ -1,0 +1,24 @@
+---
+- name: Create server on aws
+  hosts: localhost
+  connection: local
+  vars_files:
+  - /etc/ansible/vars/dummy.yml
+  tasks:
+  - name: Create app server EC2 instances
+    ec2:
+      key_name: "id_rsa"
+      region: "eu-central-1"
+      instance_type: "t2.micro"
+      image: "ami-abff2ac4"
+      wait: yes
+      group: default
+      instance_tags:
+        application: "wordpress"
+      count_tag:
+        application: "wordpress"
+        exact_count: 1
+    register: ec2app
+
+
+

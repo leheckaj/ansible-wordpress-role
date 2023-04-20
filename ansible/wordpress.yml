@@ -1,0 +1,15 @@
+---
+- name: Install wordpress
+  become: true
+  become_user: root
+  remote_user: admin
+  hosts: 
+      - localhost
+  vars:
+   apache_domain: bsa-152.kiv.zcu.cz
+   apache_docroot: /var/www/wordpress/
+  roles:
+    - role: wordpress
+  tasks:
+      - name: Uname
+        shell: "uname -a"
