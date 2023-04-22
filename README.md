@@ -18,3 +18,9 @@ git add .
 git commit -am "init"
 
 git push
+
+
+Co dělat po klonování repository
+-------------------------------
+
+Máte-li repo naclonované stačí OBSAH složky ansible přesunout do /etc/ansible
