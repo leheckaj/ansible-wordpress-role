@@ -24,3 +24,7 @@ Co dělat po klonování repository
 -------------------------------
 
 Máte-li repo naclonované stačí OBSAH složky ansible přesunout do /etc/ansible
+
+po nastavení ENV file zavolám v shellu:
+
+. .env
